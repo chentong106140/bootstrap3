@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-Bootstrap 网格系统-列重叠http://www.runoob.com/bootstrap/bootstrap-grid-system.html</title>
+    <meta name="viewport" content="width=device-width, 
+                                     initial-scale=1.0, 
+                                     maximum-scale=1.0, 
+                                     user-scalable=no">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row" >
+        <!--
+        内容有4列，手机屏幕只能一行显示2个，另外2个需要手动控制到第二行
+        内容有4列，平板屏幕可以一行显示4列
+        
+        那问题来了，如果手机屏幕如何将平板屏幕的4列进行手动控制到第二行呢？
+        所以通过使用<div class="clearfix visible-xs"></div> 
+        
+        样式visible-xs：作用是可以控制在手机屏幕的时候，手动控制列重叠在第二行
+        
+        注意：
+        由于手机屏幕一行显示两个，所以比例是6:6,一共4个，那么另外2个也是6:6
+        相当于创建了2行的内容
+        -->
+        <div class="col-xs-6 col-sm-6 col-md-3" style="background-color: #dedef8;  box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut.
+            </p>
+        </div>
+        <!--手动控制当屏幕在手机屏幕的时候换行，进行列重叠-->
+        <div class="clearfix visible-xs"></div>
+        <div class="clearfix visible-sm"></div>
+
+        <div class="col-xs-6 col-sm-6 col-md-3" style="background-color: #dedef8; box-shadow:inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #ff313b, inset -1px 1px 1px #444;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/bootstrap.js"></script>
+</body>
+</html>
