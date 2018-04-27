@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4-表单控件http://www.runoob.com/bootstrap/bootstrap-forms.html</title>
+    <meta name="viewport" content="width=device-width, 
+                                     initial-scale=1.0, 
+                                     maximum-scale=1.0, 
+                                     user-scalable=no">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css">
+    <style type="text/css">
+        .text-left{
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" style="border: 1px solid #e4b9c0 ;">
+    <h1 class="text-center "><strong> 4-表单控件</strong></h1>
+    <pre class="lead">
+       
+        最常见的表单文本字段是输入框 input。用户可以在其中输入大多数必要的表单数据。
+        Bootstrap 提供了对所有原生的 HTML5 的 input 类型的支持，
+        包括：text、password、datetime、datetime-local、date、month、time、
+        week、number、email、url、search、tel 和 color。
+        适当的 type 声明是必需的，这样才能让 input 获得完整的样式。
+
+    </pre>
+    <form role="form" class="form-horizontal">
+        <h3 class="text-left">输入框（Input）</h3>
+        <div class="form-group">
+            <label for="name" class="control-label col-md-2">标签</label>
+            <div class="col-md-10">
+                <input type="text" id="name" class="form-control" placeholder="请输入名称"/>
+            </div>
+        </div>
+        <h3 class="text-left">文本框（Textarea）</h3>
+        <div class="form-group">
+            <label for="des" class="control-label col-md-2">标签</label>
+            <div class="col-md-10">
+                <textarea id="des" class="form-control" rows="3"></textarea>
+            </div>
+        </div>
+        <h3 class="text-left">复选框（Checkbox）和单选框（Radio）</h3>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="1" />选项1
+                    </label>
+                    <label>
+                        <input type="checkbox" value="2" />选项2
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" value="1" />选项1
+                    </label>
+                    <label>
+                        <input type="radio" name="optionsRadios" value="2" />选项1
+                    </label>
+                </div>
+            </div>
+        </div>
+        <h3 class="text-left">内联的复选框和单选按钮的实例 使用checkbox-inline/radio-inline</h3>
+        <!--radio-inline/check-inline，可以使控件显示在一行上-->
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="1" />选项1
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="2" />选项2
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="optionsRadios" value="1" />选项1
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="optionsRadios" value="2" />选项1
+                    </label>
+            </div>
+        </div>
+        <h3 class="text-left">选择框（Select）</h3>
+        <div class="form-group">
+            <label class="col-md-2 control-label">请下拉单选</label>
+            <div class="col-md-10">
+                <select class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">请下拉多选</label>
+            <div class="col-md-10">
+                <select multiple="multiple" class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+        </div>
+        <h3 class="text-left">静态控件----form-control-static----填写文字</h3>
+        <div class="form-group">
+            <label class="col-md-2 control-label">昵称</label>
+            <div class="col-md-10">
+                <p class="form-control-static">齐天大圣孙悟空</p>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/bootstrap.js"></script>
+</body>
+</html>

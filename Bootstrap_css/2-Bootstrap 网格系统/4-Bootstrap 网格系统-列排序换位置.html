@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4-Bootstrap 网格系统-列排序换位置http://www.runoob.com/bootstrap/bootstrap-grid-system.html</title>
+    <meta name="viewport" content="width=device-width, 
+                                     initial-scale=1.0, 
+                                     maximum-scale=1.0, 
+                                     user-scalable=no">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Hello, world! push:向右移动位置，pull向左移动位置</h1>
+
+    <div class="row">
+        <p>排序前</p>
+        <div class="col-md-2" style="background-color: #dedef8;
+         box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+            我在左边
+        </div>
+        <div class="col-md-4" style="background-color: #dedef8;
+         box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+            我在中间
+        </div>
+        <div class="col-md-6" style="background-color: #dedef8;
+         box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+            我在右边
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <p>排序后</p>
+        <div class="col-md-2 col-md-push-10" style="background-color: #dedef8;
+         box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+            我在左边,col-md-push-10: push向右推10个，呈现在最右边（如何确定10呢？由于当前列的大小是2，要移动到最右边，那么必然就是12-2=10），定位在最右边
+        </div>
+        <div class="col-md-4 col-md-pull-2" style="background-color: #dedef8;
+         box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+            我在中间 col-md-pull-2: pull向左拉2个，呈现在最左边（如何确定是2呢？，由于当前是4，它要与它左边的列调换位置，就直接与左边位置的列交换数值=2），定位在左边
+        </div>
+        <div class="col-md-6 col-md-pull-2" style="background-color: #dedef8;
+         box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+            我在右边 col-md-pull-2: pull向左2个，呈现在中间（如何确定是2呢？原本的中间那一列是4跑到最左边了，而当前列是6，所以12-4-6=2，正好满足一行）
+        </div>
+    </div>
+
+</div>
+
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/bootstrap.js"></script>
+</body>
+</html>
