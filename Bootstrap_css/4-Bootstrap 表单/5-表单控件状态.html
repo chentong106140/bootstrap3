@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5-表单控件状态     http://www.runoob.com/bootstrap/bootstrap-forms.html</title>
+    <meta name="viewport" content="width=device-width, 
+                                     initial-scale=1.0, 
+                                     maximum-scale=1.0, 
+                                     user-scalable=no">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css">
+    <style type="text/css">
+        .text-left{
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" style="border: 1px solid #e4b9c0 ;">
+    <h1 class="text-center "><strong> 5-表单控件状态</strong></h1>
+    <pre class="lead">
+       
+除了 :focus 状态（即，用户点击 input 或使用 tab 键聚焦到 input 上），Bootstrap 还为禁用的输入框定义了
+样式，并提供了表单验证的 class。输入框焦点
+
+当输入框 input 接收到 :focus 时，输入框的轮廓会被移除，同时应用 box-shadow。
+禁用的输入框 input
+
+如果您想要禁用一个输入框 input，只需要简单地添加 disabled 属性，这不仅会禁用输入框，
+还会改变输入框的样式以及当鼠标的指针悬停在元素上时鼠标指针的样式。
+禁用的字段集 fieldset
+
+对 &lt;fieldset> 添加 disabled 属性来禁用 &lt;fieldset> 内的所有控件。
+验证状态
+
+Bootstrap 包含了错误、警告和成功消息的验证样式。只需要对父元素简单地添加适当的 
+class（.has-warning、 .has-error 或 .has-success）即可使用验证状态。
+
+    </pre>
+    <form role="form" class="form-horizontal">
+        <div class="form-group">
+            <label for="name" class="control-label col-md-2">聚焦</label>
+            <div class="col-md-10">
+                <input type="text" id="name" class="form-control" placeholder="该输入框获得焦点..."/>
+            </div>
+        </div>
+        <!--使用disable对控件进行禁用-->
+        <div class="form-group">
+            <label for="des" class="control-label col-md-2">禁用</label>
+            <div class="col-md-10">
+                <input disabled type="text" id="des" class="form-control" placeholder="该输入框禁止输入..."/>
+            </div>
+        </div>
+        <h3 class="text-left">fieldset 批量禁用</h3>
+        <fieldset disabled>
+            <div class="form-group">
+                <label for="name" class="control-label col-md-2">禁用</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" placeholder="该输入框禁止输入..." />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name" class="control-label col-md-2">禁用下拉</label>
+                <div class="col-md-10">
+                    <select class="form-control">
+                        <option>选项</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+        <h3>状态颜色</h3>
+    </form>
+</div>
+
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/bootstrap.js"></script>
+</body>
+</html>
